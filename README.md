@@ -1,3 +1,5 @@
+![Python CI](https://github.com/Liam-Deacon/alice_and_bob/workflows/Python%20package/badge.svg)
+
 # Alice and Bob information sharing code challenge
 Diffie-Hellman coding challenge for secret information exchange using public/private keys
 
