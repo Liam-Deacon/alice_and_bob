@@ -65,7 +65,8 @@ def diffie_hellman(p: Prime, g: Prime) -> Keys:
     return Keys((A, B), a, b)
 
 
-def get_cli_parser():
+def get_cli_parser() -> ArgumentParser:
+    """Return an ArgumentParser instance."""
     parser = ArgumentParser(description="CLI options for Alice and Bob key share")
     parser.add_argument('-p', help='Prime p for information exchange', type=int)
     parser.add_argument('-g', help='Prime g for information exchange', type=int)
@@ -74,8 +75,7 @@ def get_cli_parser():
 
 
 def cli_main(argv: Optional[Iterable[str]] = None):
-    """
-    This is the main entry for command line execution of the program.
+    """This is the main entry for command line execution of the program.
 
     Run with `python -m alice_and_bob.key_share --help` for more details."
 
@@ -87,8 +87,7 @@ def cli_main(argv: Optional[Iterable[str]] = None):
 
 
 def main(p: Prime, g: Prime):
-    """
-    Perform actions requested by coding challenge.
+    """Perform actions requested by coding challenge.
 
     Briefly, perform the following:
 
