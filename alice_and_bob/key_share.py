@@ -1,5 +1,5 @@
 """Module for naively performing Diffie-Helman key exchange."""
-from argparse import ArgumentError, ArgumentParser
+from argparse import ArgumentParser
 from collections import namedtuple
 
 import sys
