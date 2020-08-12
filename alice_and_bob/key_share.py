@@ -1,6 +1,7 @@
 """Module for naively performing Diffie-Helman key exchange."""
 from argparse import ArgumentParser
 from collections import namedtuple
+from typing import Optional, Sequence
 
 import sys
 import secrets
@@ -11,13 +12,14 @@ Keys = namedtuple('Keys', 'public_key_pair private_key_a private_key_b')
 
 class PrivateKey:
     """A simple class for generating private keys.
-    
+
     Attributes
     ----------
     DEFAULT_BITS: int
         Should be 2^n representing how many bits to use for the private key.
 
     """
+
     DEFAULT_BITS = 512
 
     @classmethod
@@ -40,9 +42,9 @@ def diffie_hellman(p: Prime, g: Prime) -> Keys:
     -------
     Named Tuple of shared public key generated from p & g, private key a, and private key b.
 
-    Or more simply: 
+    Or more simply:
 
-    ((public_a, public_b), private_a, private_b)  
+    ((public_a, public_b), private_a, private_b)
 
 
     References
@@ -56,14 +58,15 @@ def diffie_hellman(p: Prime, g: Prime) -> Keys:
     a = PrivateKey.generate_private_key()
     b = PrivateKey.generate_private_key()
 
-    # generate public keys by mixing primes 
+    # generate public keys by mixing primes
     A = pow(g, a, p)  # share this with Bob
     B = pow(g, b, p)  # share this with Alice
 
     return Keys((A, B), a, b)
 
 
-def get_cli_parser():
+def get_cli_parser() -> ArgumentParser:
+    """Return an ArgumentParser instance."""
     parser = ArgumentParser(description="CLI options for Alice and Bob key share")
     parser.add_argument('-p', help='Prime p for information exchange', type=int)
     parser.add_argument('-g', help='Prime g for information exchange', type=int)
@@ -71,21 +74,21 @@ def get_cli_parser():
     return parser
 
 
-def cli_main(argv=sys.argv):
+def cli_main(argv: Optional[Sequence[str]] = None):
     """This is the main entry for command line execution of the program.
-    
+
     Run with `python -m alice_and_bob.key_share --help` for more details."
-    
+
     """
     parser = get_cli_parser()
-    args, _ = parser.parse_known_args(argv)
+    args, _ = parser.parse_known_args(argv or sys.argv)
     PrivateKey.DEFAULT_BITS = args.bits
     main(args.p, args.g)
 
 
 def main(p: Prime, g: Prime):
     """Perform actions requested by coding challenge.
-    
+
     Briefly, perform the following:
 
     1. Generate public key pair from Diffie-Helmann algorithm
