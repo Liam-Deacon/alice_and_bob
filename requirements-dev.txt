@@ -9,6 +9,7 @@ nbstripout
 pbr
 wheel
 packaging
+coveralls
 
 # security analysis
 bandit
