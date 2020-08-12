@@ -11133,7 +11133,7 @@ class Prime(int):
 
     def __init__(self, x: int):
         if not isinstance(x, int):
-            raise ValueError('x must an integer')
+            raise TypeError('x must an integer')
 
         if not self.is_prime(x):
             raise ValueError('x must be a prime number')
