@@ -48,6 +48,7 @@ def test_main_output():
 
         assert re.match('Shared secret key: [0-9]+', fake_stdout.getvalue())
 
+
 def test_generate_private_key():
     random.seed(0)
 
@@ -61,32 +62,8 @@ def test_generate_private_key():
 def test_generate_private_key_bit_length():
     random.seed(0)
 
-    keys1 = []
-    for i in range(10):
-        key = PrivateKey.generate_private_key(256)
-        assert key not in keys1
-        keys1.append(key)
-
-        random.seed(0)
-
-    # second part: double check function is repeatable (needed to verify for next check below)
-    random.seed(0)  # reset
-
-    keys2 = []
-    for i in range(10):
-        key = PrivateKey.generate_private_key(256)
-        assert key not in keys2
-        keys2.append(key)
-
-    assert keys1 == keys2
-
-    # final part: try different number of bits when generating private key
-    random.seed(0)
-
-    keys3 = []
-    for i in range(10):
-        key = PrivateKey.generate_private_key(512)
-        assert key not in keys2
-        keys2.append(key)
-
-    assert all((keys2[i] != keys3[i] for i in range(len(keys2))))
+    keys = []
+    for i in (256, 512, 1024, 2048, 4096):
+        key = PrivateKey.generate_private_key(i)
+        assert all((key > keys[i] for i in range(len(keys))))
+        keys.append(key)
