@@ -46,3 +46,33 @@ git clone https://github.com/Liam-Deacon/alice_and_bob
 cd alice_and_bob
 python3 -m alice_and_bob.key_share --help
 ```
+
+### CLI Example
+
+```bash
+$ python3 -m alice_and_bob.key_share -p 61 -g 53
+Shared secret key: 60
+```
+
+It is also possible to specify the number of bits used for the generated private keys:
+
+```bash
+$ python3 -m alice_and_bob.key_share -p 88937 -g 104729  --bits=2048
+Shared secret key: 39885
+```
+
+### Python Example
+
+```python
+>>> from alice_and_bob.key_share import main as code
+>>> code(p=2, g=3)  # only one possibility as primes very small
+Shared secret key: 1
+>>> code(61, 53)
+Shared secret key: 34
+>>> code(61, 53)
+Shared secret key: 37
+>>> code(61, 53)
+Shared secret key: 9
+>>> code(61, 53)
+Shared secret key: 11
+```
