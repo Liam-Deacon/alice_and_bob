@@ -1,7 +1,6 @@
-![Python CI](https://github.com/Liam-Deacon/alice_and_bob/workflows/Python%20package/badge.svg)
-
 <!--lint disable no-inline-padding-->
 
+![Python CI](https://github.com/Liam-Deacon/alice_and_bob/workflows/Python%20package/badge.svg)
 [![ ](https://github.com/liam-deacon/alice_and_bob/workflows/Python%20CI/badge.svg)](https://github.com/liam-deacon/alice_and_bob/actions?query=workflow%3A"Python+CI")
 [![ ](https://img.shields.io/pypi/pyversions/alice_and_bob.svg?logo=python)](https://pypi.org/pypi/alice_and_bob/)
 [![ ](https://img.shields.io/pypi/l/alice_and_bob.svg)](https://pypi.org/pypi/alice_and_bob/)
