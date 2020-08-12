@@ -1,7 +1,7 @@
 """Module for naively performing Diffie-Helman key exchange."""
 from argparse import ArgumentParser
 from collections import namedtuple
-from typing import Iterable, Optional
+from typing import Optional, Sequence
 
 import sys
 import secrets
@@ -74,7 +74,7 @@ def get_cli_parser() -> ArgumentParser:
     return parser
 
 
-def cli_main(argv: Optional[Iterable[str]] = None):
+def cli_main(argv: Optional[Sequence[str]] = None):
     """This is the main entry for command line execution of the program.
 
     Run with `python -m alice_and_bob.key_share --help` for more details."
