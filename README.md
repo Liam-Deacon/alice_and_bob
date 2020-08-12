@@ -7,6 +7,7 @@
 [![ ](https://img.shields.io/pypi/l/alice_and_bob.svg)](https://pypi.org/pypi/alice_and_bob/)
 [![ ](https://img.shields.io/pypi/implementation/alice_and_bob?color=seagreen)](https://pypi.org/pypi/alice_and_bob/)
 [![ ](https://img.shields.io/pypi/dm/alice_and_bob.svg?color=yellow)](https://pypi.org/pypi/alice_and_bob/)
+[![ ](https://pyup.io/repos/github/Liam-Deacon/alice_and_bob/shield.svg)](https://pyup.io/repos/github/Liam-Deacon/alice_and_bob/)
 [![ ](https://coveralls.io/repos/github/Liam-Deacon/alice_and_bob/badge.svg?branch=master)](https://coveralls.io/github/Liam-Deacon/alice_and_bob?branch=master)
 [![ ](https://codecov.io/gh/Liam-Deacon/alice_and_bob/branch/master/graph/badge.svg)](https://codecov.io/gh/Liam-Deacon/alice_and_bob)
 [![ ](https://api.codacy.com/project/badge/Grade/de571d98b5ed4203b6eda5f927c8835d)](https://www.codacy.com/gh/Liam-Deacon/alice_and_bob?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Liam-Deacon/alice_and_bob&amp;utm_campaign=Badge_Grade)
