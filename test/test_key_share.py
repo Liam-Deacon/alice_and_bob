@@ -1,3 +1,5 @@
+from unittest.mock import Mock, patch
+from argparse import ArgumentParser
 from collections import namedtuple
 from alice_and_bob.key_share import (
     Keys, PrivateKey, diffie_hellman, get_cli_parser, cli_main, main
@@ -67,3 +69,26 @@ def test_generate_private_key_bit_length():
         key = PrivateKey.generate_private_key(i)
         assert all((key > keys[i] for i in range(len(keys))))
         keys.append(key)
+
+
+def test_get_cli_parser():
+    parser = get_cli_parser()
+    assert isinstance(parser, ArgumentParser)
+
+@patch('alice_and_bob.key_share.main')
+def test_cli_main(print):
+    cli_main(['-p', '2', '-g', '3'])
+
+
+def test_main_shared_secret_differs_raises_value_error():
+    def fake_pow(*args):
+        for ans in (2, 3, 5, 7, 9):
+            yield ans
+
+    with patch('builtins.pow', fake_pow):
+        try:
+            cli_main(['-p', '2', '-g', '3'])
+        except ValueError:
+            pass
+        else:
+            raise AssertionError('Shared key should differ')
