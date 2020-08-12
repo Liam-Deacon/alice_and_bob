@@ -1,4 +1,4 @@
-# alice_and_bob
+# Alice and Bob information sharing code challenge
 Diffie-Hellman coding challenge for secret information exchange using public/private keys
 
 ## Background
