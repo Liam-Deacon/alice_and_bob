@@ -10,6 +10,14 @@ from .primes import Prime
 Keys = namedtuple('Keys', 'public_key_pair private_key_a private_key_b')
 
 class PrivateKey:
+    """A simple class for generating private keys.
+    
+    Attributes
+    ----------
+    DEFAULT_BITS: int
+        Should be 2^n representing how many bits to use for the private key.
+
+    """
     DEFAULT_BITS = 512
 
     @classmethod
