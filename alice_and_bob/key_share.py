@@ -92,6 +92,13 @@ def main(p: Prime, g: Prime):
     2. Using public key pair, calculate shared secret key for both Alice and Bob
     3. Check shared secret is the same and print to console.
 
+    Raises
+    ------
+    RuntimeError
+        When p and q are not prime numbers and hence any keys generated are insecure.
+    ValueError
+        When the shared secret key for Alice and Bob do not match.
+
     """
     try:
         p, g = Prime(p), Prime(g)
@@ -113,7 +120,6 @@ def main(p: Prime, g: Prime):
 
     print(f'Shared secret key: {alice_shared_secret}')
 
-    # print(keys.public_pair)
 
 if __name__ == '__main__':
     cli_main()
