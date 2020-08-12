@@ -17,3 +17,11 @@ https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange
 - Ensure that your code is clean and uses good practice (e.g. error handling) and is commented well.
 - Ensure that your code can work cross platform and across different versions of Python.
 - Feel free to add as many bells and whistles as you so desired (e.g. Unit Tests)
+
+# Running the code
+
+```bash
+git clone https://github.com/Liam-Deacon/alice_and_bob
+cd alice_and_bob
+python3 -m alice_and_bob.key_share --help
+```
