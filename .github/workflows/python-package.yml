@@ -64,7 +64,7 @@ jobs:
 
     - name: Build and Deploy Docs
       uses: JacksonMaxfield/github-pages-deploy-action-python@master
-      if: ${{ github.event_name == 'push' }}
+      if: ${{ github.event_name == 'push' && matrix.python_version == 3.8 && matrix.os == 'ubuntu-latest' }}
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BASE_BRANCH: master # The branch the action should deploy from.
