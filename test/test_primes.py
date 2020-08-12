@@ -8,6 +8,7 @@ def test_known_prime():
 def test_raises_value_error_when_not_prime():
     try:
         not_prime = Prime(4)
+        assert not_prime == 4
     except ValueError:
         pass
     else:
