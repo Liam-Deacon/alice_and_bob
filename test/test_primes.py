@@ -5,6 +5,7 @@ def test_known_prime():
     assert isinstance(prime, int)
     assert prime == 3
 
+
 def test_raises_value_error_when_not_prime():
     try:
         not_prime = Prime(4)

@@ -29,8 +29,7 @@ class PrivateKey:
 
 
 def diffie_hellman(p: Prime, g: Prime) -> Keys:
-    """
-    Generate public and private keys for primes p and g using Diffie-Hellman algorithm.
+    """Generate public and private keys for primes p and g using Diffie-Hellman algorithm.
 
     Parameters
     ----------
