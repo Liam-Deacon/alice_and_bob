@@ -116,9 +116,9 @@ def main(p: Prime, g: Prime):
 
     if alice_shared_secret != bob_shared_secret:
         raise ValueError('Shared secret keys for Alice and Bob must match '
-                         f'(got {alice_shared_secret}, {bob_shared_secret})')
+                         '(got {alice_shared_secret}, {bob_shared_secret})'.format(**locals()))
 
-    print(f'Shared secret key: {alice_shared_secret}')
+    print('Shared secret key: {}'.format(alice_shared_secret))
 
 
 if __name__ == '__main__':
