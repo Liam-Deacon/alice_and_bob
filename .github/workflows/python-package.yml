@@ -25,41 +25,42 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: ${{ matrix.python-version }}
-        - name: Display Python version
-        run: python -c "import sys; print(sys.version)"
 
-      - name: Install development requirements
-        run: |
+    - name: Display Python version
+      run: python -c "import sys; print(sys.version)"
+
+    - name: Install development requirements
+      run: |
           pip install -r requirements-dev.txt
-
-      - name: Install testing requirements
-        run: |
+          
+    - name: Install testing requirements
+      run: |
           pip install -r requirements-test.txt
 
-      - name: Install requirements
-        run: |
+    - name: Install requirements
+      run: |
           pip install -r requirements.txt
 
-      - name: Generate coverage report
-        run: |
+    - name: Generate coverage report
+      run: |
           pip install -e .
           pytest
 
-      - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v1
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
-          file: ./coverage.xml
-          flags: unittests
-          name: codecov-umbrella
-          fail_ci_if_error: false
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v1
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        file: ./coverage.xml
+        flags: unittests
+        name: codecov-umbrella
+        fail_ci_if_error: false
 
-      - name: Upload coverage to Coveralls
-        run: |
+    - name: Upload coverage to Coveralls
+      run: |
           COVERALLS_REPO_TOKEN=$COVERALLS_REPO_TOKEN coveralls
-        env:
+      env:
           COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
-        shell: bash
+      shell: bash
 
   checks:
     runs-on: ubuntu-latest
