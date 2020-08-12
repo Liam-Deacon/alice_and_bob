@@ -1,5 +1,5 @@
 """Module for naively performing Diffie-Helman key exchange."""
-from argparse import ArgumentError, ArgumentParser
+from argparse import ArgumentParser
 from collections import namedtuple
 
 import sys
@@ -10,6 +10,14 @@ from .primes import Prime
 Keys = namedtuple('Keys', 'public_key_pair private_key_a private_key_b')
 
 class PrivateKey:
+    """A simple class for generating private keys.
+    
+    Attributes
+    ----------
+    DEFAULT_BITS: int
+        Should be 2^n representing how many bits to use for the private key.
+
+    """
     DEFAULT_BITS = 512
 
     @classmethod
@@ -84,28 +92,34 @@ def main(p: Prime, g: Prime):
     2. Using public key pair, calculate shared secret key for both Alice and Bob
     3. Check shared secret is the same and print to console.
 
+    Raises
+    ------
+    RuntimeError
+        When p and q are not prime numbers and hence any keys generated are insecure.
+    ValueError
+        When the shared secret key for Alice and Bob do not match.
+
     """
     try:
         p, g = Prime(p), Prime(g)
     except ValueError:
-        raise ArgumentError("Encryption is only secure if p and q are prime numbers.")
+        raise RuntimeError("Encryption is only secure if p and q are prime numbers.")
 
 
     # do Diffie-Hellman key exchange by mixing primes
     keys = diffie_hellman(p, g)
-    A, B = keys.public_pair
+    A, B = keys.public_key_pair
 
     # get secret key
-    alice_shared_secret = pow(B, keys.private_a, p)
-    bob_shared_secret = pow(A, keys.private_b, p)
+    alice_shared_secret = pow(B, keys.private_key_a, p)
+    bob_shared_secret = pow(A, keys.private_key_b, p)
 
     if alice_shared_secret != bob_shared_secret:
         raise ValueError('Shared secret keys for Alice and Bob must match '
-                         f'(got {alice_shared_secret}, {bob_shared_secret})')
+                         '(got {alice_shared_secret}, {bob_shared_secret})'.format(**locals()))
 
-    print(f'Shared secret key: {alice_shared_secret}')
+    print('Shared secret key: {}'.format(alice_shared_secret))
 
-    # print(keys.public_pair)
 
 if __name__ == '__main__':
     cli_main()
