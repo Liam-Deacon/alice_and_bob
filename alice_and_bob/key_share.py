@@ -96,16 +96,16 @@ def main(p: Prime, g: Prime):
     try:
         p, g = Prime(p), Prime(g)
     except ValueError:
-        raise ArgumentError("Encryption is only secure if p and q are prime numbers.")
+        raise RuntimeError("Encryption is only secure if p and q are prime numbers.")
 
 
     # do Diffie-Hellman key exchange by mixing primes
     keys = diffie_hellman(p, g)
-    A, B = keys.public_pair
+    A, B = keys.public_key_pair
 
     # get secret key
-    alice_shared_secret = pow(B, keys.private_a, p)
-    bob_shared_secret = pow(A, keys.private_b, p)
+    alice_shared_secret = pow(B, keys.private_key_a, p)
+    bob_shared_secret = pow(A, keys.private_key_b, p)
 
     if alice_shared_secret != bob_shared_secret:
         raise ValueError('Shared secret keys for Alice and Bob must match '
