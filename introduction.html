@@ -240,7 +240,7 @@ Shared secret key: <span class="m">39885</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">diffie_helman</span><span class="p">(</span><span class="n">p</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">g</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>  <span class="c1"># the primes used in Diffie-Hellman algorithm should be much larger</span>
 <span class="go">Keys(public_key_pair=(1, 1), private_key_a=16353971836403060303, private_key_b=9351112014020560943)</span>
 
-<span class="go"># output from diffie_helman() function is a namedtuple, i.e.</span>
+<span class="go"># output from diffie_hellman() function is a namedtuple, i.e.</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">keys</span> <span class="o">=</span> <span class="n">diffie_hellman</span><span class="p">(</span><span class="n">p</span><span class="o">=</span><span class="mi">16353971836403060303</span><span class="p">,</span> <span class="n">g</span><span class="o">=</span><span class="mi">9351112014020560943</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">keys</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># return public keys</span>
 <span class="go">(3313824243486361299, 5114973081711194950)</span>
