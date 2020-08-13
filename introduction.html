@@ -1,0 +1,321 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1. Introduction &mdash; alice_and_bob 0.0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="3. Changes" href="changelog.html" />
+    <link rel="prev" title="Welcome to the alice_and_bob documentation!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> alice_and_bob
+          
+
+          
+            
+            <img src="_static/logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#alice-and-bob-information-sharing-code-challenge">2. Alice and Bob information sharing code challenge</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#background">2.1. Background</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#code-requirements">2.2. Code requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#running-the-code">2.3. Running the code</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#cli-example">2.3.1. CLI Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#python-example">2.3.2. Python Example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">3. Changes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html#todo">4. TODO</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">alice_and_bob</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li><span class="section-number">1. </span>Introduction</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/introduction.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduction">
+<h1><span class="section-number">1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<!--lint disable no-inline-padding--><a class="reference external image-reference" href="https://github.com/Liam-Deacon/alice_and_bob/workflows/Python%20package/badge.svg"><img alt="Python CI" src="https://github.com/Liam-Deacon/alice_and_bob/workflows/Python%20package/badge.svg" /></a>
+<a class="reference external image-reference" href="https://github.com/liam-deacon/alice_and_bob/actions?query=workflow%3A&quot;Python+CI&quot;"><img alt="" src="https://github.com/liam-deacon/alice_and_bob/workflows/Python%20CI/badge.svg" /></a>
+<a class="reference external image-reference" href="https://pypi.org/pypi/alice_and_bob/"><img alt="" src="https://img.shields.io/pypi/pyversions/alice_and_bob.svg?logo=python" /></a>
+<a class="reference external image-reference" href="https://pypi.org/pypi/alice_and_bob/"><img alt="" src="https://img.shields.io/pypi/l/alice_and_bob.svg" /></a>
+<a class="reference external image-reference" href="https://pypi.org/pypi/alice_and_bob/"><img alt="" src="https://img.shields.io/pypi/implementation/alice_and_bob?color=seagreen" /></a>
+<a class="reference external image-reference" href="https://pypi.org/pypi/alice_and_bob/"><img alt="" src="https://img.shields.io/pypi/dm/alice_and_bob.svg?color=yellow" /></a>
+<a class="reference external image-reference" href="https://pyup.io/repos/github/Liam-Deacon/alice_and_bob/"><img alt="" src="https://pyup.io/repos/github/Liam-Deacon/alice_and_bob/shield.svg" /></a>
+<a class="reference external image-reference" href="https://coveralls.io/github/Liam-Deacon/alice_and_bob?branch=master"><img alt="" src="https://coveralls.io/repos/github/Liam-Deacon/alice_and_bob/badge.svg?branch=master" /></a>
+<a class="reference external image-reference" href="https://codecov.io/gh/Liam-Deacon/alice_and_bob"><img alt="" src="https://codecov.io/gh/Liam-Deacon/alice_and_bob/branch/master/graph/badge.svg" /></a>
+<a class="reference external image-reference" href="https://www.codacy.com/gh/Liam-Deacon/alice_and_bob?utm_source=github.com&amp;amp;utm_medium=referral&amp;amp;utm_content=Liam-Deacon/alice_and_bob&amp;amp;utm_campaign=Badge_Grade"><img alt="" src="https://api.codacy.com/project/badge/Grade/de571d98b5ed4203b6eda5f927c8835d" /></a>
+<a class="reference external image-reference" href="https://www.codefactor.io/repository/github/Liam-Deacon/alice_and_bob"><img alt="" src="https://coveralls.io/github/Liam-Deacon/alice_and_bob" /></a>
+<a class="reference external image-reference" href="https://img.shields.io/pypi/v/alice_and_bob"><img alt="" src="https://img.shields.io/pypi/v/alice_and_bob" /></a>
+<a class="reference external image-reference" href="https://ko-fi.com/lightbytes"><img alt="" src="https://img.shields.io/badge/Donate-buy%20me%20a%20coffee-green?logo=Buy%20me%20a%20coffee&amp;logoColor=white" /></a>
+<a class="reference external image-reference" href="https://GitHub.com/Liam-Deacon/alice_and_bob/issues/"><img alt="GitHub issues" src="https://img.shields.io/github/issues/Liam-Deacon/alice_and_bob.svg" /></a>
+<a class="reference external image-reference" href="https://GitHub.com/Liam-Deacon/alice_and_bob/issues?q=is%3Aissue+is%3Aclosed"><img alt="GitHub issues-closed" src="https://img.shields.io/github/issues-closed/Liam-Deacon/alice_and_bob.svg" /></a>
+<a class="reference external image-reference" href="https://GitHub.com/Liam-Deacon/alice_and_bob/pull/"><img alt="GitHub pull-requests" src="https://img.shields.io/github/issues-pr/Liam-Deacon/alice_and_bob.svg" /></a>
+<a class="reference external image-reference" href="https://GitHub.com/Liam-Deacon/alice_and_bob/pull/"><img alt="GitHub pull-requests closed" src="https://img.shields.io/github/issues-pr-closed/Liam-Deacon/alice_and_bob.svg" /></a>
+<a class="reference external image-reference" href="https://img.shields.io/badge/dev-Open%20in%20Gitpod-blue?logo=gitpod&amp;link=https://gitpod.io/#https://github.com/liam-deacon/alice_and_bob"><img alt="" src="https://img.shields.io/badge/dev-Open%20in%20Gitpod-blue?logo=gitpod&amp;link=https://gitpod.io/#https://github.com/liam-deacon/alice_and_bob" /></a>
+<a class="reference external image-reference" href="https://colab.research.google.com/github/liam-deacon/alice_and_bob"><img alt="" src="https://camo.githubusercontent.com/52feade06f2fecbf006889a904d221e6a730c194/68747470733a2f2f636f6c61622e72657365617263682e676f6f676c652e636f6d2f6173736574732f636f6c61622d62616467652e737667" /></a>
+<a class="reference external image-reference" href="https://mybinder.org/v2/gh/Liam-Deacon/alice_and_bob/master?urlpath=lab"><img alt="" src="https://img.shields.io/badge/Binder%20Launch:-Jupyter%20Lab-blue.svg?colorA=&amp;logo=data:image/png;base64,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" /></a>
+<!--lint enable no-inline-padding--></div>
+<div class="section" id="alice-and-bob-information-sharing-code-challenge">
+<h1><span class="section-number">2. </span>Alice and Bob information sharing code challenge<a class="headerlink" href="#alice-and-bob-information-sharing-code-challenge" title="Permalink to this headline">¶</a></h1>
+<p>Diffie-Hellman coding challenge for secret information exchange using public/private keys</p>
+<div class="section" id="background">
+<h2><span class="section-number">2.1. </span>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h2>
+<p>Alice and Bob use the Diffie-Hellman key exchange algorithm to share secret information. Alice and Bob start with prime numbers, pick private keys, generate and share public keys, finally they then generate a shared secret key.</p>
+<p>Your code module should take in two prime numbers, <strong>p</strong> and <strong>g</strong> and output the value of p and g, the private key a for Alice and b for Bob. Finally your program should print out the Shared Secret key for Alice and Bob.</p>
+<p>If your implementation is correct, the Shared Secret keys should match.</p>
+<p>Note: This challenge requires you to perform calculations on large numbers. Further information can be found at
+<a class="reference external" href="https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange">https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange</a></p>
+</div>
+<div class="section" id="code-requirements">
+<h2><span class="section-number">2.2. </span>Code requirements<a class="headerlink" href="#code-requirements" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Ensure that your code is clean and uses good practice (e.g. error handling) and is commented well.</p></li>
+<li><p>Ensure that your code can work cross platform and across different versions of Python.</p></li>
+<li><p>Feel free to add as many bells and whistles as you so desired (e.g. Unit Tests)</p></li>
+</ul>
+</div>
+<div class="section" id="running-the-code">
+<h2><span class="section-number">2.3. </span>Running the code<a class="headerlink" href="#running-the-code" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/Liam-Deacon/alice_and_bob
+<span class="nb">cd</span> alice_and_bob
+python3 -m alice_and_bob.key_share --help
+</pre></div>
+</div>
+<div class="section" id="cli-example">
+<h3><span class="section-number">2.3.1. </span>CLI Example<a class="headerlink" href="#cli-example" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ python3 -m alice_and_bob.key_share -p <span class="m">61</span> -g <span class="m">53</span>
+Shared secret key: <span class="m">60</span>
+</pre></div>
+</div>
+<p>It is also possible to specify the number of bits used for the generated private keys:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ python3 -m alice_and_bob.key_share -p <span class="m">88937</span> -g <span class="m">104729</span>  --bits<span class="o">=</span><span class="m">2048</span>
+Shared secret key: <span class="m">39885</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="python-example">
+<h3><span class="section-number">2.3.2. </span>Python Example<a class="headerlink" href="#python-example" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">alice_and_bob.key_share</span> <span class="kn">import</span> <span class="n">PrivateKey</span><span class="p">,</span> <span class="n">diffie_hellman</span><span class="p">,</span> <span class="n">main</span> <span class="k">as</span> <span class="n">code</span>
+
+<span class="go"># Lets try using PrivateKey class and diffie_helman function to generate public and private keys from 2 primes</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">PrivateKey</span><span class="o">.</span><span class="n">DEFAULT_BITS</span> <span class="o">=</span> <span class="mi">8</span>  <span class="c1"># Should be using at least 2048 bits in real life scenario</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">diffie_helman</span><span class="p">(</span><span class="n">p</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">g</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>  <span class="c1"># the primes used in Diffie-Hellman algorithm should be much larger</span>
+<span class="go">Keys(public_key_pair=(1, 1), private_key_a=16353971836403060303, private_key_b=9351112014020560943)</span>
+
+<span class="go"># output from diffie_helman() function is a namedtuple, i.e.</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">keys</span> <span class="o">=</span> <span class="n">diffie_hellman</span><span class="p">(</span><span class="n">p</span><span class="o">=</span><span class="mi">16353971836403060303</span><span class="p">,</span> <span class="n">g</span><span class="o">=</span><span class="mi">9351112014020560943</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">keys</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># return public keys</span>
+<span class="go">(3313824243486361299, 5114973081711194950)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">keys</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="n">keys</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>  <span class="c1"># compare private keys</span>
+<span class="go">True</span>
+
+<span class="go"># finally the shared secret key is printed by using the main/code function, which wraps diffie_helman()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">code</span><span class="p">(</span><span class="n">p</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">g</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>  <span class="c1"># only one possibility as primes very small</span>
+<span class="go">Shared secret key: 1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">code</span><span class="p">(</span><span class="mi">61</span><span class="p">,</span> <span class="mi">53</span><span class="p">)</span>
+<span class="go">Shared secret key: 37</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">code</span><span class="p">(</span><span class="mi">61</span><span class="p">,</span> <span class="mi">53</span><span class="p">)</span>
+<span class="go">Shared secret key: 9</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">code</span><span class="p">(</span><span class="mi">61</span><span class="p">,</span> <span class="mi">53</span><span class="p">)</span>
+<span class="go">Shared secret key: 11</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="changelog.html" class="btn btn-neutral float-right" title="3. Changes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to the alice_and_bob documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Light Bytes Technology Ltd.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
