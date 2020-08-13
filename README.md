@@ -68,7 +68,21 @@ Shared secret key: 39885
 ### Python Example
 
 ```python
->>> from alice_and_bob.key_share import main as code
+>>> from alice_and_bob.key_share import PrivateKey, diffie_hellman, main as code
+
+# Lets try using PrivateKey class and diffie_helman function to generate public and private keys from 2 primes
+>>> PrivateKey.DEFAULT_BITS = 8  # Should be using at least 2048 bits in real life scenario
+>>> diffie_helman(p=2, g=3)  # the primes used in Diffie-Hellman algorithm should be much larger
+Keys(public_key_pair=(1, 1), private_key_a=16353971836403060303, private_key_b=9351112014020560943)
+
+# output from diffie_helman() function is a namedtuple, i.e.
+>>> keys = diffie_hellman(p=16353971836403060303, g=9351112014020560943)
+>>> keys[0]  # return public keys
+(3313824243486361299, 5114973081711194950)
+>>> keys[1] != keys[2]  # compare private keys
+True
+
+# finally the shared secret key is printed by using the main/code function, which wraps diffie_helman()
 >>> code(p=2, g=3)  # only one possibility as primes very small
 Shared secret key: 1
 >>> code(61, 53)
