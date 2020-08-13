@@ -1,6 +1,5 @@
 # essentials
 twine
-sphinx
 setuptools>=37
 cython
 cython-setuptools
