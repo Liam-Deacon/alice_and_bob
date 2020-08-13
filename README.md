@@ -86,8 +86,6 @@ True
 >>> code(p=2, g=3)  # only one possibility as primes very small
 Shared secret key: 1
 >>> code(61, 53)
-Shared secret key: 34
->>> code(61, 53)
 Shared secret key: 37
 >>> code(61, 53)
 Shared secret key: 9
