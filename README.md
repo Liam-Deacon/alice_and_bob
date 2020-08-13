@@ -75,7 +75,7 @@ Shared secret key: 39885
 >>> diffie_helman(p=2, g=3)  # the primes used in Diffie-Hellman algorithm should be much larger
 Keys(public_key_pair=(1, 1), private_key_a=16353971836403060303, private_key_b=9351112014020560943)
 
-# output from diffie_helman() function is a namedtuple, i.e.
+# output from diffie_hellman() function is a namedtuple, i.e.
 >>> keys = diffie_hellman(p=16353971836403060303, g=9351112014020560943)
 >>> keys[0]  # return public keys
 (3313824243486361299, 5114973081711194950)
