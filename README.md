@@ -92,3 +92,23 @@ Shared secret key: 9
 >>> code(61, 53)
 Shared secret key: 11
 ```
+
+## Bells & Whistles 🔔
+
+- Unit tests 🧪
+- High code coverage (see shields above) 🔦
+- Repo badges! 📛
+- GitHub Actions for CI pipeline ⚙️
+  - Checks against Python 3.5, 3.6, 3.7 & 3.8 for testing
+  - Repeats checks on Windows, Mac OS and Linux
+  - Builds (example) documentation using Sphinx and deploys to https://liam-deacon.github.io/alice_and_bob/
+- Published as python package to https://PyPI.org 📦
+- Example command line script provided (see CLI example above) 📜
+
+## TODO
+
+Future improvements _could_ be:
+- Add linter checks to CI pipeline (PEP8, style, docstrings, code compexity, type checks, etc.)
+- Add web UI and dockerise
+- Use GitHub Actions to auto increment and deploy PyPI releases on successful PR completion into master branch
+- Better documentation (devs will complain it is insufficient regardless - its what we do ;-))
