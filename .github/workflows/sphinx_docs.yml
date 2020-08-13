@@ -9,6 +9,11 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     
+    - name: Setup python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.7
+    
     - name: Install dependencies
       run: |
         pip3 install setuptools wheel
